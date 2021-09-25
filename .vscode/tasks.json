@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build docker floki/metrics-exporter",
+            "type": "shell",
+            "command": "docker build --tag floki/metrics-exporter ./exporter",
+            "problemMatcher": []
+        },
+        {
+            "label": "run prometheus server",
+            "type": "shell",
+            "command": "prometheus --config.file=prometheus/prometheus.yml",
+            "problemMatcher": []
+        }
+    ]
+}
